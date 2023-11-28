@@ -1,0 +1,28 @@
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.link-active {
+  color: palevioletred;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.link {
+  text-decoration: none;
+  margin-right: 50px;
+}
