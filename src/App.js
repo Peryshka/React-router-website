@@ -12,6 +12,7 @@ import LoginPage from "./components/LoginPage";
 import RequireAuth from "./components/hoc/RequireAuth";
 import {AuthProvider} from "./components/hoc/AuthProvider";
 import React from "react";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 //index is used when there is one link for 2 components not to repeat 2 link address
 //Navigate pereadresaciya redirect
 //redirect is good when we have 1 component and 2 different links
@@ -24,7 +25,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path="team" element={<p>Our team</p>} />
     </Route>
     <Route path="about-us" element={<Navigate to={'/about'} replace /> } />
-    <Route path="posts" element={<Blogpage /> } loader = {blogLoader} />
+    <Route path="posts" element={<Blogpage /> } loader = {blogLoader} errorElement={<ErrorPage />}/>
     <Route path="posts/:id" element={<Singlepage /> } loader={postLoader} />
     <Route path="posts/:id/edit" element={<EditPost /> } />
     <Route path="posts/new" element={
